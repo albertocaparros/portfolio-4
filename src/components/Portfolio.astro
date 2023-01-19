@@ -1,0 +1,94 @@
+<section id='portfolio' class='flex container min-h-screen my-6'>
+	<div class='flex flex-col gap-8 my-auto p-2 text-center'>
+		<div class='mx-auto'>
+			<h2 class='text-2xl font-bold'>Portfolio</h2>
+			<p class='text-sm' data-i18n-key='portfolio-subtitle'>
+				I have recently started to get back in the market and pursue a new
+				position in front-end development. Here are some personal projects that
+				I have worked on recently to showcase my skills and learn new things.
+			</p>
+		</div>
+
+		<div class='flex flex-col gap-6'>
+			<h3 class='text-xl font-semibold'>Dailys board</h3>
+			<a href='https://dailys-board.vercel.app/' target='_blank'
+				><img
+					src={'img/dailys-board-screenshot.jpg'}
+					alt='proyecto1'
+					class='rounded-lg w-80 mx-auto'
+				/></a
+			>
+			<p class='text-sm' data-i18n-key='dailys-board-description'>
+				With remote work we lost the good old analogic board that helped the
+				team move the daily meeting forward. Tired of awkward silents and people
+				asking who had already talked, I created this simple app to help my
+				team. Currently it is using localstorage for data persistency, and I'm
+				working on adding a toast notification feature.
+			</p>
+			<ul class='flex gap-4 text-sm flex-wrap justify-center'>
+				<li class='border-sky-50 border rounded-full py-1 px-3'>react</li>
+				<li class='border-sky-50 border rounded-full py-1 px-3'>tailwind</li>
+				<li class='border-sky-50 border rounded-full py-1 px-3'>cypress</li>
+				<li class='border-sky-50 border rounded-full py-1 px-3'>
+					context hook
+				</li>
+			</ul>
+			<div class='flex justify-evenly'>
+				<a
+					class='bg-sky-800 hover:bg-sky-600 rounded py-3 px-6 border-black border'
+					href='https://dailys-board.vercel.app/'
+					target='_blank'>
+					<span class='font-semibold'>Demo</span></a
+				>
+				<a
+					href='https://github.com/albertocaparros/dailys-board'
+					target='_blank'
+					class='bg-sky-800 hover:bg-sky-600 rounded py-3 px-6 border-black border'
+					><i class='uil uil-brackets-curly button_icon'></i>
+					<span data-i18n-key='code' class='font-semibold'>Code</span></a
+				>
+			</div>
+		</div>
+		<!-- AQUUUUUUUUUUUUUUUUUUUUUUUUUU -->
+		<div class='flex flex-col gap-6'>
+			<h3 class='text-xl font-semibold'>My travel journal</h3>
+			<a href='https://mytrips.vercel.app/' target='_blank'
+				><img
+					src={'img/my-travel-journal-screenshot.jpg'}
+					alt='proyecto 2'
+					class='rounded-lg w-80 mx-auto'
+				/></a
+			>
+			<p class='text-sm' data-i18n-key='travel-journal-description'>
+				I developed this app to make a little journal where I can keep track of
+				the places I have visited over the world. You can check the pictures and
+				some information on the locations, as well as seeing all the spots in
+				the map. Originally a vanilla js app, I made a second iteration of this
+				project using Remix.
+			</p>
+			<ul class='flex gap-4 text-sm flex-wrap justify-center'>
+				<li class='border-sky-50 border rounded-full py-1 px-3'>react</li>
+				<li class='border-sky-50 border rounded-full py-1 px-3'>remix</li>
+				<li class='border-sky-50 border rounded-full py-1 px-3'>css</li>
+				<li class='border-sky-50 border rounded-full py-1 px-3'>prisma</li>
+				<li class='border-sky-50 border rounded-full py-1 px-3'>
+					google maps API
+				</li>
+			</ul>
+			<div class='flex justify-evenly'>
+				<a
+					href='https://mytrips.vercel.app/'
+					target='_blank'
+					class='bg-sky-800 hover:bg-sky-600 rounded py-3 px-6 border-black border'>
+					<span class='font-semibold'>Demo</span></a
+				>
+				<a
+					href='https://github.com/albertocaparros/mytrips'
+					target='_blank'
+					class='bg-sky-800 hover:bg-sky-600 rounded py-3 px-6 border-black border'>
+					<span data-i18n-key='code' class='font-semibold'>Code</span></a
+				>
+			</div>
+		</div>
+	</div>
+</section>
