@@ -1,0 +1,52 @@
+<section id='about' class='flex container min-h-screen my-6'>
+	<div class='flex flex-col gap-8 my-auto p-2'>
+		<div class='mx-auto'>
+			<h2 class='text-center text-2xl font-bold' data-i18n-key='about'>
+				About me
+			</h2>
+			<h2 class='text-center text-xs' data-i18n-key='about-subtitle'>
+				Who's Alberto
+			</h2>
+		</div>
+
+		<img
+			class='rounded-3xl border-sky-50 border-2 w-72 m-auto'
+			src={'img/profile.jpg'}
+			alt='profile picture'
+		/>
+
+		<div class='flex flex-col gap-4 text-center text-sm'>
+			<p data-i18n-key='about-paragraph-1'>
+				I've been fascinated by the potential of web development since I wrote
+				my first html lines when I was 14. Nowadays I'm looking for an
+				opportunity to develop front-end technologies and become an expert in
+				this field.
+			</p>
+			<p data-i18n-key='about-paragraph-2'>
+				Besides creating high-quality code and learning about web technologies,
+				I'm a globetrotter who's lived in 7 countries and visited more than 30
+				(and counting!).
+			</p>
+			<p data-i18n-key='about-paragraph-3'>
+				You can get a copy of my CV clicking on the button below, and if you are
+				still curious about my personal story you can click on the 'Learn more'
+				button.
+			</p>
+		</div>
+		<div class='flex gap-4 m-auto'>
+			<a
+				class='bg-sky-800 hover:bg-sky-600 rounded py-3 px-6 border-black border'
+				href={'docs/Alberto Caparrós CV.pdf'}
+				target='_blank'>
+				<span class='font-semibold' data-i18n-key='download-cv'
+					>Download CV</span
+				>
+			</a>
+			<div
+				class='bg-sky-800 hover:bg-sky-600 rounded py-3 px-6 border-black border'
+				id='open-modal'>
+				<span class='font-semibold' data-i18n-key='learn-more'>Learn more</span>
+			</div>
+		</div>
+	</div>
+</section>
