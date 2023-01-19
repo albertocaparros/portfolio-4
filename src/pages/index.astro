@@ -1,5 +1,14 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Home from '../components/Home.astro';
+import About from '../components/About.astro';
+import Portfolio from '../components/Portfolio.astro';
 ---
 
-<h1 class="text-sky-700 font-bold">Hello world</h1>
+<Layout>
+	<div class='bg-sky-50 text-slate-700 dark:bg-slate-800 dark:text-neutral-50'>
+		<Home />
+		<About />
+		<Portfolio />
+	</div>
+</Layout>
