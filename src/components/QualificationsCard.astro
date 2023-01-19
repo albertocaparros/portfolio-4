@@ -1,0 +1,32 @@
+---
+import MenuDown from '../icons/MenuDown.astro';
+
+const { imgSrc, title, subtitle, tags, expand } = Astro.props;
+---
+
+<div
+	class='qualifications_header clickable flex gap-2 items-center justify-around'>
+	<img
+		src={`img/${imgSrc}`}
+		alt={imgSrc}
+		class='rounded-full w-20 h-20 border-sky-50 border'
+	/>
+	<div class='text-left class= flex-1'>
+		<h3 class='text-lg font-bold' data-i18n-key='u4-title'>
+			{title}
+		</h3>
+		<span class='text-xs' data-i18n-key='u4-subtitle'>{subtitle}</span>
+		{
+			tags && (
+				<ul class='tag_list gap-2 flex flex-wrap justify-items-stretch mt-2'>
+					{tags.map((tag) => (
+						<li class='text-xs border-sky-50 border rounded-full py-1 px-3'>
+							{tag}
+						</li>
+					))}
+				</ul>
+			)
+		}
+	</div>
+	{expand && <MenuDown />}
+</div>
