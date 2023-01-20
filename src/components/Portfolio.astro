@@ -1,3 +1,7 @@
+---
+import Pill from './Pill.astro';
+---
+
 <section id='portfolio' class='flex container min-h-screen my-6'>
 	<div class='flex flex-col gap-8 my-auto p-2 text-center'>
 		<div>
@@ -25,13 +29,11 @@
 				team. Currently it is using localstorage for data persistency, and I'm
 				working on adding a toast notification feature.
 			</p>
-			<ul class='flex gap-4 text-sm flex-wrap justify-center'>
-				<li class='border-sky-50 border rounded-full py-1 px-3'>react</li>
-				<li class='border-sky-50 border rounded-full py-1 px-3'>tailwind</li>
-				<li class='border-sky-50 border rounded-full py-1 px-3'>cypress</li>
-				<li class='border-sky-50 border rounded-full py-1 px-3'>
-					context hook
-				</li>
+			<ul class='flex gap-2 text-sm flex-wrap justify-center'>
+				<Pill tag={'react'} />
+				<Pill tag={'tailwind'} />
+				<Pill tag={'cypress'} />
+				<Pill tag={'Hooks'} />
 			</ul>
 			<div class='flex justify-evenly'>
 				<a
@@ -66,14 +68,12 @@
 				the map. Originally a vanilla js app, I made a second iteration of this
 				project using Remix.
 			</p>
-			<ul class='flex gap-4 text-sm flex-wrap justify-center'>
-				<li class='border-sky-50 border rounded-full py-1 px-3'>react</li>
-				<li class='border-sky-50 border rounded-full py-1 px-3'>remix</li>
-				<li class='border-sky-50 border rounded-full py-1 px-3'>css</li>
-				<li class='border-sky-50 border rounded-full py-1 px-3'>prisma</li>
-				<li class='border-sky-50 border rounded-full py-1 px-3'>
-					google maps API
-				</li>
+			<ul class='flex gap-2 text-sm flex-wrap justify-center'>
+				<Pill tag={'react'} />
+				<Pill tag={'remix'} />
+				<Pill tag={'css'} />
+				<Pill tag={'prisma'} />
+				<Pill tag={'Google Maps API'} />
 			</ul>
 			<div class='flex justify-evenly'>
 				<a

@@ -1,0 +1,7 @@
+---
+const { tag, textSize = 'base' } = Astro.props;
+---
+
+<li class={`text-${textSize} border-sky-50 border rounded-full py-1 px-4`}>
+	{tag}
+</li>
