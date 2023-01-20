@@ -1,6 +1,10 @@
 ---
+import About from '../icons/About.astro';
+import Education from '../icons/Education.astro';
 import Github from '../icons/Github.astro';
+import Home from '../icons/Home.astro';
 import Linkedin from '../icons/Linkedin.astro';
+import Portfolio from '../icons/Portfolio.astro';
 ---
 
 <footer class='bg-sky-800'>
@@ -13,14 +17,22 @@ import Linkedin from '../icons/Linkedin.astro';
 		</div>
 		<div>
 			<ul class='flex flex-col gap-3'>
-				<li>
+				<li class='flex gap-2 items-start'>
+					<Home height={5} width={5} />
 					<a href='#home' data-i18n-key='home'>Home</a>
 				</li>
-				<li>
+				<li class='flex gap-2 items-start'>
+					<About height={5} width={5} />
 					<a href='#about' data-i18n-key='about'>About me</a>
 				</li>
-				<li><a href='#portfolio'>Portfolio</a></li>
-				<li><a href='#qualifications'>Qualifications</a></li>
+				<li class='flex gap-2 items-start'>
+					<Portfolio height={5} width={5} />
+					<a href='#portfolio'>Portfolio</a>
+				</li>
+				<li class='flex gap-2 items-start'>
+					<Education height={5} width={5} />
+					<a href='#qualifications'>Qualifications</a>
+				</li>
 			</ul>
 		</div>
 		<div>
