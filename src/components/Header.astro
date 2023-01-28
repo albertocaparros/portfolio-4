@@ -1,5 +1,6 @@
 ---
 import Apps from '../icons/Apps.astro';
+import I18n from './I18n.astro';
 import ThemeToggler from './ThemeToggler';
 ---
 
@@ -12,9 +13,7 @@ import ThemeToggler from './ThemeToggler';
 
 		<div class='flex gap-4 items-center mr-4'>
 			<ThemeToggler client:load />
-			<div data-i18n-switcher class='change-language'>
-				<p data-i18n-key='change-language' class='text-xl'>es</p>
-			</div>
+			<I18n />
 			<Apps height={5} width={5} />
 		</div>
 
