@@ -1,6 +1,6 @@
 ---
 import Apps from '../icons/Apps.astro';
-import Sun from '../icons/Sun.astro';
+import ThemeToggler from './ThemeToggler';
 ---
 
 <header
@@ -11,7 +11,7 @@ import Sun from '../icons/Sun.astro';
 		<p class='ml-4'>Alberto Caparrós</p>
 
 		<div class='flex gap-4 items-center mr-4'>
-			<Sun height={5} width={5} />
+			<ThemeToggler client:load />
 			<div data-i18n-switcher class='change-language'>
 				<p data-i18n-key='change-language' class='text-xl'>es</p>
 			</div>
