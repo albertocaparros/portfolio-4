@@ -1,8 +1,9 @@
 ---
-const { height = 10, width = 10 } = Astro.props;
+const { height = 10, width = 10, id = '' } = Astro.props;
 ---
 
 <svg
+	id={id}
 	xmlns='http://www.w3.org/2000/svg'
 	fill='none'
 	viewBox='0 0 24 24'

@@ -1,0 +1,53 @@
+---
+import About from '../icons/About.astro';
+import Close from '../icons/Close.astro';
+import Education from '../icons/Education.astro';
+import Home from '../icons/Home.astro';
+import Portfolio from '../icons/Portfolio.astro';
+---
+
+<div
+	class='transition-all shadow-[0px_-1px_4px] shadow-slate-400 pt-8 px-1 pb-16 z-50 fixed w-full h-1/4 -bottom-60 bg-sky-50 text-slate-700 dark:bg-slate-800 dark:text-neutral-50'
+	id='nav-menu'>
+	<ul class='grid gap-x-0 gap-y-8 grid-cols-3 col-'>
+		<li>
+			<a href='#home' class='flex flex-col items-center gap-1'>
+				<Home height={5} width={5} />
+				<span data-i18n-key='home'>Home</span>
+			</a>
+		</li>
+		<li>
+			<a href='#about' class='flex flex-col items-center gap-1'>
+				<About height={5} width={5} />
+				<span data-i18n-key='about'>About</span>
+			</a>
+		</li>
+		<li>
+			<a href='#portfolio' class='flex flex-col items-center gap-1'>
+				<Portfolio height={5} width={5} />
+				<span>Portfolio</span>
+			</a>
+		</li>
+		<li>
+			<a href='#qualifications' class='flex flex-col items-center gap-1'>
+				<Education height={5} width={5} />
+				<span data-i18n-key='qualifications'>Qualifications</span>
+			</a>
+		</li>
+	</ul>
+	<div class='flex justify-end mr-2'>
+		<Close height={6} width={6} id={'close-nav-menu'} />
+	</div>
+</div>
+
+<script>
+	const closeButton = document.getElementById('close-nav-menu');
+
+	var scrollUp = () => {
+		const navMenu = document.getElementById('nav-menu');
+		navMenu.classList.add('-bottom-60');
+		navMenu.classList.remove('bottom-0');
+	};
+
+	closeButton.addEventListener('click', scrollUp);
+</script>

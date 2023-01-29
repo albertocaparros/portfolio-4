@@ -6,7 +6,7 @@ import ThemeToggler from './ThemeToggler';
 
 <header
 	id='header'
-	class='z-50 w-full fixed bottom-0 g-sky-50 text-slate-700 dark:bg-slate-800 dark:text-neutral-50 h-12'>
+	class='shadow-[0px_-1px_4px] shadow-slate-400 z-40 w-full fixed bottom-0 bg-sky-50 text-slate-700 dark:bg-slate-800 dark:text-neutral-50 h-12'>
 	<nav
 		class='h-full flex text-center mx-auto gap-2 items-center justify-between'>
 		<p class='ml-4'>Alberto Caparrós</p>
@@ -14,36 +14,19 @@ import ThemeToggler from './ThemeToggler';
 		<div class='flex gap-4 items-center mr-4'>
 			<ThemeToggler client:load />
 			<I18n />
-			<Apps height={5} width={5} />
-		</div>
-
-		<div class='hidden' id='nav-menu'>
-			<ul class='nav_list grid'>
-				<li class='nav_item'>
-					<a href='#home' class='nav_link'
-						><i class='uil uil-home nav_icon'></i>
-						<span data-i18n-key='home'>Home</span></a
-					>
-				</li>
-				<li class='nav_item'>
-					<a href='#about' class='nav_link'
-						><i class='uil uil-user nav_icon'></i>
-						<span data-i18n-key='about'>About</span></a
-					>
-				</li>
-				<li class='nav_item'>
-					<a href='#portfolio' class='nav_link'
-						><i class='uil uil-suitcase nav_icon'></i> Portfolio</a
-					>
-				</li>
-				<li class='nav_item'>
-					<a href='#qualifications' class='nav_link'
-						><i class='uil uil-graduation-cap nav_icon'></i>
-						<span data-i18n-key='qualifications'>Qualifications</span></a
-					>
-				</li>
-			</ul>
-			<i class='uil uil-times nav_close' id='nav-close'></i>
+			<Apps height={5} width={5} id={'open-nav-menu'} />
 		</div>
 	</nav>
 </header>
+
+<script>
+	const openButton = document.getElementById('open-nav-menu');
+
+	var scrollUp = () => {
+		const navMenu = document.getElementById('nav-menu');
+		navMenu.classList.add('bottom-0');
+		navMenu.classList.remove('-bottom-60');
+	};
+
+	openButton.addEventListener('click', scrollUp);
+</script>
