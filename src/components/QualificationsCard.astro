@@ -1,8 +1,8 @@
 ---
-import MenuDown from '../icons/MenuDown.astro';
+import Expander from './Expander';
 import Pill from './Pill.astro';
 
-const { imgSrc, title, subtitle, tags, expand } = Astro.props;
+const { imgSrc, title, subtitle, tags, expandId } = Astro.props;
 ---
 
 <div
@@ -27,5 +27,7 @@ const { imgSrc, title, subtitle, tags, expand } = Astro.props;
 			)
 		}
 	</div>
-	{expand && <MenuDown />}
+	{expandId && <Expander client:load expandId={expandId} />}
 </div>
+
+<script></script>
