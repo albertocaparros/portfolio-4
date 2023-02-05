@@ -50,3 +50,14 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	const openModalButton = document.getElementById('open-modal');
+
+	var openModal = () => {
+		const modal = document.getElementById('learn-more-modal');
+		modal.classList.remove('hidden');
+	};
+
+	openModalButton.addEventListener('click', openModal);
+</script>
