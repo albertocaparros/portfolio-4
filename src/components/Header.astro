@@ -6,15 +6,38 @@ import ThemeToggler from './ThemeToggler';
 
 <header
 	id='header'
-	class='shadow-[0px_-1px_4px] shadow-slate-400 z-40 w-full fixed bottom-0 bg-sky-50 text-slate-700 dark:bg-slate-800 dark:text-neutral-50 h-12'>
+	class='shadow-[0px_-1px_4px] shadow-slate-400 z-40 w-full fixed bottom-0 bg-sky-50 text-slate-700 dark:bg-slate-800 dark:text-neutral-50 h-12 lg:top-0 lg:w-full lg:fixed lg:flex lg:justify-around lg:items-center lg:h-24'>
 	<nav
-		class='h-full flex text-center mx-auto gap-2 items-center justify-between'>
-		<p class='ml-4'>Alberto Caparrós</p>
+		class='h-full flex text-center mx-auto gap-2 items-center justify-between lg:ustify-around lg:w-full'>
+		<p class='ml-4 lg:text-xl lg:font-medium lg:ml-10'>Alberto Caparrós</p>
 
-		<div class='flex gap-4 items-center mr-4'>
+		<div class='mr-4 nav-header flex gap-4 items-center lg:mr-10'>
+			<div class='hidden lg:block'>
+				<a
+					href='#home'
+					class='ml-4 lg:text-xl lg:font-medium'
+					data-i18n-key='home'>Home</a
+				>
+				<a
+					href='#about'
+					class='ml-4 lg:text-xl lg:font-medium'
+					data-i18n-key='about'>
+					About me
+				</a>
+				<a href='#portfolio' class='ml-4 lg:text-xl lg:font-medium'>Portfolio</a
+				>
+				<a
+					href='#qualifications'
+					class='ml-4 lg:text-xl lg:font-medium'
+					data-i18n-key='qualifications'>
+					Qualifications
+				</a>
+			</div>
 			<button><ThemeToggler client:load /></button>
 			<button><I18n /></button>
-			<button><Apps height={5} width={5} id={'open-nav-menu'} /></button>
+			<button class='lg:hidden'
+				><Apps height={5} width={5} id={'open-nav-menu'} /></button
+			>
 		</div>
 	</nav>
 </header>
@@ -29,4 +52,30 @@ import ThemeToggler from './ThemeToggler';
 	};
 
 	openButton.addEventListener('click', scrollUp);
+</script>
+
+<script>
+	const sections = document.querySelectorAll('section[id]');
+
+	function scrollActive() {
+		const scrollY = window.scrollY;
+
+		sections.forEach((current) => {
+			const sectionHeight = (current as HTMLElement).offsetHeight;
+			const sectionTop = (current as HTMLElement).offsetTop - 90;
+			let sectionId = current.getAttribute('id');
+
+			if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+				document
+					.querySelector('.nav-header a[href*=' + sectionId + ']')
+					.classList.add('text-cyan-600');
+			} else {
+				document
+					.querySelector('.nav-header a[href*=' + sectionId + ']')
+					.classList.remove('text-cyan-600');
+			}
+		});
+	}
+
+	window.addEventListener('scroll', scrollActive);
 </script>
