@@ -1,13 +1,12 @@
 ---
 import Github from '../icons/Github.astro';
 import Linkedin from '../icons/Linkedin.astro';
-import Logo from '../icons/Logo.astro';
 import Mail from '../icons/Mail.astro';
 ---
 
 <section
 	id='home'
-	class='flex h-screen sm:h-min mb-6 w-full pt-8 pb-16 lg:pt-20 lg:pb-16 lg:text-2xl'>
+	class='flex h-screen sm:h-min mb-6 w-full pt-8 pb-16 sm:py-4 lg:pt-36 lg:text-2xl'>
 	<div
 		class='grid grid-cols-[1.5fr,3fr] gap-x-0 gap-y-6 my-auto px-2 py-16 items-center sm:grid-cols-[0.5fr,2.5fr,1fr] lg:max-w-6xl lg:mx-auto lg:gap-12'>
 		<div class='flex flex-col items-center my-auto gap-0'>
@@ -19,15 +18,22 @@ import Mail from '../icons/Mail.astro';
 				<Linkedin height={8} width={8} />
 			</a>
 			<a
-				href='https://www.linkedin.com/in/albertocaparros/'
+				href='https://github.com/albertocaparros/'
 				class='my-8'
 				target='_blank'
-				title='My linkedin profile'>
+				title='My github profile'>
 				<Github height={8} width={8} />
 			</a>
 		</div>
 
-		<img src={'img/test.png'} class='mx-auto w-44 sm:order-1 lg:w-64' />
+		<img
+			src={'img/logo_light.png'}
+			class='mx-auto w-44 sm:order-1 lg:w-64 hidden dark:block'
+		/>
+		<img
+			src={'img/logo_dark.png'}
+			class='mx-auto w-44 sm:order-1 lg:w-64 block dark:hidden'
+		/>
 
 		<div
 			class='col-start-1 col-end-3 text-center sm:col-start-auto sm:col-end-auto'>
