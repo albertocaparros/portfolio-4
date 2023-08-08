@@ -5,18 +5,19 @@ import Pill from './Pill.astro';
 const { imgSrc, title, subtitle, tags, expandId } = Astro.props;
 ---
 
-<div
-	class='qualifications_header clickable flex gap-2 items-center justify-around'>
+<div class='clickable flex gap-2 items-center justify-around my-4'>
 	<img
 		src={`img/${imgSrc}`}
 		alt={imgSrc}
 		class='rounded-full w-16 h-16 border-sky-50 border'
 	/>
 	<div class='text-left class= flex-1'>
-		<h3 class='text-base font-bold' data-i18n-key='u4-title'>
+		<h3 class='text-base font-bold lg:text-lg' data-i18n-key={`${title}`}>
 			{title}
 		</h3>
-		<span class='text-xs' data-i18n-key='u4-subtitle'>{subtitle}</span>
+		<span class='text-xs lg:text-base' data-i18n-key={`${subtitle}`}
+			>{subtitle}</span
+		>
 		{
 			tags && (
 				<ul class='tag_list gap-2 flex flex-wrap justify-items-stretch mt-2'>
