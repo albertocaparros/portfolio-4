@@ -13,7 +13,7 @@
 
 		<div class='grid gap-4 sm:grid-cols-2'>
 			<img
-				class='rounded-3xl border-sky-50 border-2 w-72 m-auto'
+				class='rounded-3xl border-sky-900 border-2 w-72 m-auto lg:w-96 dark:border-sky-50'
 				src={'img/profile.jpg'}
 				alt='profile picture'
 			/>
@@ -32,9 +32,8 @@
 						visited more than 30 (and counting!).
 					</p>
 					<p data-i18n-key='about-paragraph-3'>
-						You can get a copy of my CV clicking on the button below, and if you
-						are still curious about my personal story you can click on the
-						'Learn more' button.
+						If you want to know more about my work experience, you can access my
+						CV by clicking the button below.
 					</p>
 				</div>
 				<div class='flex gap-4 mx-auto my-4 justify-center'>
@@ -46,26 +45,8 @@
 							>Download CV</span
 						>
 					</a>
-					<button
-						class='bg-blue-200 hover:bg-blue-300 dark:bg-sky-800 dark:hover:bg-sky-700 rounded py-3 px-6 border-black border text-center'
-						id='open-modal'>
-						<span class='font-semibold' data-i18n-key='learn-more'
-							>Learn more</span
-						>
-					</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
-<script>
-	const openModalButton = document.getElementById('open-modal');
-
-	var openModal = () => {
-		const modal = document.getElementById('learn-more-modal');
-		modal.classList.remove('hidden');
-	};
-
-	openModalButton.addEventListener('click', openModal);
-</script>
