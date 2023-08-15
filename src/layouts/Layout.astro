@@ -16,7 +16,8 @@
 
 		<script is:inline>
 			const isDarkMode = localStorage.getItem('theme');
-			const theme = isDarkMode === 'dark' ? 'dark' : '';
+			const theme =
+				isDarkMode === 'dark' ? 'scroll-smooth dark' : 'scroll-smooth';
 
 			document.querySelector('html').className = theme;
 		</script>
