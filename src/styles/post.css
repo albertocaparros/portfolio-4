@@ -1,0 +1,81 @@
+.prose {
+	font-family: IBM Plex Mono, monospace;
+}
+
+.prose > h2 {
+	font-weight: 600;
+	margin-top: 1rem;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+.prose > h3 {
+	font-weight: 600;
+	font-size: larger;
+	margin-top: 1.6em;
+	margin-bottom: 0.6em;
+	line-height: 1.6;
+}
+
+.prose > p {
+	margin-top: 1.5em;
+	margin-bottom: 1.25em;
+	font-size: large;
+	line-height: 1.75;
+}
+
+.prose > ul {
+	list-style-type: disc;
+	margin-top: 1.25em;
+	margin-bottom: 1.25em;
+	padding-left: 1.625em;
+}
+
+li {
+	display: list-item;
+}
+
+blockquote {
+	display: block;
+	padding: 5px 15px 5px 30px;
+	position: relative;
+	border-left: 5px solid #ea580c;
+}
+
+html:not(.dark) blockquote {
+	border-left-color: #0369a1;
+}
+
+blockquote a {
+	text-decoration: none;
+	cursor: pointer;
+	padding: 0 3px;
+	color: #f97316;
+	text-decoration: underline;
+	text-decoration-style: dashed;
+	text-underline-offset: 6px;
+}
+
+html:not(.dark) blockquote a {
+	color: #0369a1;
+}
+
+blockquote a:hover {
+	color: #666;
+}
+
+blockquote em {
+	font-style: italic;
+}
+
+.prose :is(:where(img):not(:where([class~='not-prose'] *))) {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.5rem !important;
+	border-width: 2px;
+	border-color: #ea5a0cc2;
+}
+
+html:not(.dark) .prose :is(:where(img):not(:where([class~='not-prose'] *))) {
+	border-color: #036aa1c2;
+}

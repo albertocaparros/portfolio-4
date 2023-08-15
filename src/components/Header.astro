@@ -9,7 +9,9 @@ import ThemeToggler from './ThemeToggler';
 	class='shadow-[0px_-1px_4px] shadow-slate-400 z-40 w-full fixed bottom-0 bg-sky-50 text-slate-700 dark:bg-slate-800 dark:text-neutral-50 h-12 lg:top-0 lg:w-full lg:fixed lg:flex lg:justify-around lg:items-center lg:h-24'>
 	<nav
 		class='h-full flex text-center mx-auto gap-2 items-center justify-between lg:ustify-around lg:w-full'>
-		<p class='ml-4 lg:text-xl lg:font-medium lg:ml-10'>Alberto Caparrós</p>
+		<a href='/' class='ml-4 lg:text-xl lg:font-medium lg:ml-10'
+			>Alberto Caparrós</a
+		>
 
 		<div class='mr-4 nav-header flex gap-4 items-center lg:mr-10'>
 			<div class='hidden lg:block'>
@@ -32,6 +34,7 @@ import ThemeToggler from './ThemeToggler';
 					data-i18n-key='qualifications'>
 					Qualifications
 				</a>
+				<a href='/blog/' class='ml-4 lg:text-xl lg:font-medium'> Blog</a>
 			</div>
 			<button><ThemeToggler client:load /></button>
 			<button><I18n /></button>

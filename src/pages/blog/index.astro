@@ -1,0 +1,47 @@
+---
+import '../../styles/post.css';
+import Layout from '../../layouts/Layout.astro';
+import Separator from '../../components/Separator.astro';
+import PostCard from '../../components/PostCard.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const allPosts = await Astro.glob('./posts/*.md');
+const postsByLatest = allPosts.sort(
+	(a, b) =>
+		new Date(b.frontmatter.pubDate).getTime() -
+		new Date(a.frontmatter.pubDate).getTime()
+);
+---
+
+<Layout>
+	<Navigation type='blog' />
+	<main
+		class='flex flex-col justify-start max-w-3xl mx-auto p-4 w-full h-full py-10 lg:pt-36'>
+		<article class='prose'>
+			<h1 class='text-6xl text-sky-700 dark:text-orange-500 pb-2 text-center'>
+				Frontdev is my passion
+			</h1>
+			<img src='https://i.imgur.com/oVMhNrE.jpeg' />
+			<p>
+				In this blog I will be sharing different articles related to frontend
+				development. It will be a mix of new things I learnt, old things I want
+				to summarize and store for easy access in the future and my thoughts
+				about the process of learning web development.
+			</p>
+			<Separator noPadding={true} />
+			<h2>Recent posts</h2>
+
+			{
+				postsByLatest.map((post) => (
+					<PostCard
+						url={post.frontmatter.href}
+						title={post.frontmatter.title}
+						img={post.frontmatter.image}
+						description={post.frontmatter.description}
+						datetime={post.frontmatter.pubDate}
+					/>
+				))
+			}
+		</article>
+	</main>
+</Layout>

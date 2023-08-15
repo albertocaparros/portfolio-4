@@ -1,0 +1,20 @@
+---
+import Datetime from './Datetime';
+const { url, title, img, description, datetime } = Astro.props;
+---
+
+<div class='my-6'>
+	<a
+		class='inline-block decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0 font-medium text-lg text-skin-accent'
+		href={`./posts/${url}`}
+		><h3
+			class='decoration-dashed font-semibold text-xl text-sky-700 dark:text-orange-500 hover:underline'>
+			{title}
+		</h3>
+		<Datetime datetime={datetime} />
+	</a>
+	<div class='flex flex-col'>
+		<div class='max-w-xs'><img src={img.url} alt={img.alt} /></div>
+		<p class='my-3'>{description}</p>
+	</div>
+</div>
