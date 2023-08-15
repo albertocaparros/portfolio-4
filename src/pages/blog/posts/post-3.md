@@ -1,5 +1,5 @@
 ---
-layout: ./src/layouts/BlogLayout.astro
+layout: ../../../layouts/BlogLayout.astro
 title: My Third Blog Post
 href: 'post-3'
 author: Astro Learner

@@ -1,5 +1,5 @@
 ---
-layout: ./src/layouts/BlogLayout.astro
+layout: ../../../layouts/BlogLayout.astro
 author: Sat Naing
 pubDate: 2022-01-30T15:57:52.737Z
 title: AstroPaper 2.0

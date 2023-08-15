@@ -1,5 +1,5 @@
 ---
-layout: ./src/layouts/BlogLayout.astro
+layout: ../../../layouts/BlogLayout.astro
 title: 'My First Blog Post'
 href: 'post-1'
 pubDate: 2021-07-01
