@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en' class='dark scroll-smooth'>
+<html lang='en' class={`scroll-smooth `}>
 	<head>
 		<meta charset='UTF-8' />
 		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
@@ -13,8 +13,18 @@
 			rel='stylesheet'
 		/>
 		<link rel='icon' type='image/png' href='/favicon.svg' />
+
+		<script is:inline>
+			const isDarkMode = localStorage.getItem('theme');
+			const theme = isDarkMode === 'dark' ? 'dark' : '';
+
+			document.querySelector('html').className = theme;
+		</script>
 	</head>
 	<body>
-		<slot />
+		<div
+			class='bg-sky-50 text-slate-700 dark:bg-slate-800 dark:text-neutral-50 mb-12 lg:mb-0 min-h-screen'>
+			<slot />
+		</div>
 	</body>
-</html>
+</html>)

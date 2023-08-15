@@ -1,4 +1,4 @@
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 
 const SunIcon = (
 	<svg
@@ -33,15 +33,30 @@ const MoonIcon = (
 export default function ThemeToggler() {
 	const [theme, setTheme] = useState('dark');
 
+	useEffect(() => {
+		const page = document.getElementsByTagName('html')[0];
+		const storedTheme = window.localStorage.getItem('theme');
+
+		if (storedTheme === 'light') {
+			setTheme('light');
+			page.classList.remove('dark');
+		} else {
+			setTheme('dark');
+			page.classList.add('dark');
+		}
+	}, []);
+
 	const toggleTheme = () => {
 		const page = document.getElementsByTagName('html')[0];
 
 		if (theme === 'dark') {
 			setTheme('light');
 			page.classList.remove('dark');
+			window.localStorage.setItem('theme', 'light');
 		} else {
 			setTheme('dark');
 			page.classList.add('dark');
+			window.localStorage.setItem('theme', 'dark');
 		}
 	};
 
