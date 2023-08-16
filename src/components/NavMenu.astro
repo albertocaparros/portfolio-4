@@ -4,6 +4,7 @@ import Close from '../icons/Close.astro';
 import Education from '../icons/Education.astro';
 import Home from '../icons/Home.astro';
 import Portfolio from '../icons/Portfolio.astro';
+import Blog from '../icons/Blog.astro';
 ---
 
 <div
@@ -32,6 +33,12 @@ import Portfolio from '../icons/Portfolio.astro';
 			<a href='#qualifications' class='flex flex-col items-center gap-1'>
 				<Education height={5} width={5} />
 				<span data-i18n-key='qualifications'>Qualifications</span>
+			</a>
+		</li>
+		<li>
+			<a href='/blog/' class='flex flex-col items-center gap-1'>
+				<Blog height={5} width={5} />
+				<span>Blog</span>
 			</a>
 		</li>
 	</ul>

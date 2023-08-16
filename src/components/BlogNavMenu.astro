@@ -1,9 +1,8 @@
 ---
 import About from '../icons/About.astro';
+import Blog from '../icons/Blog.astro';
 import Close from '../icons/Close.astro';
-import Education from '../icons/Education.astro';
 import Home from '../icons/Home.astro';
-import Portfolio from '../icons/Portfolio.astro';
 ---
 
 <div
@@ -11,27 +10,15 @@ import Portfolio from '../icons/Portfolio.astro';
 	id='nav-menu'>
 	<ul class='grid gap-x-0 gap-y-8 grid-cols-3'>
 		<li>
-			<a href='#home' class='flex flex-col items-center gap-1'>
+			<a href='/' class='flex flex-col items-center gap-1'>
 				<Home height={5} width={5} />
 				<span data-i18n-key='home'>Home</span>
 			</a>
 		</li>
 		<li>
-			<a href='#about' class='flex flex-col items-center gap-1'>
-				<About height={5} width={5} />
-				<span data-i18n-key='about'>About</span>
-			</a>
-		</li>
-		<li>
-			<a href='#portfolio' class='flex flex-col items-center gap-1'>
-				<Portfolio height={5} width={5} />
-				<span>Portfolio</span>
-			</a>
-		</li>
-		<li>
-			<a href='#qualifications' class='flex flex-col items-center gap-1'>
-				<Education height={5} width={5} />
-				<span data-i18n-key='qualifications'>Qualifications</span>
+			<a href='/blog/' class='flex flex-col items-center gap-1'>
+				<Blog height={5} width={5} />
+				<span>Blog</span>
 			</a>
 		</li>
 	</ul>
