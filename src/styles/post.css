@@ -1,27 +1,35 @@
 .prose {
-	font-family: IBM Plex Mono, monospace;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.prose > h1 {
+  margin-top: 2em;         
+  margin-bottom: 0.8em; 
+  font-size: 2.25rem; 
+  line-height: 1.2; 
+  font-weight: 700;
 }
 
 .prose > h2 {
-	font-weight: 600;
-	margin-top: 1rem;
-	font-size: x-large;
-	font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+  font-size: 1.75rem; 
+  font-weight: 700;
 }
 
 .prose > h3 {
-	font-weight: 600;
-	font-size: larger;
-	margin-top: 1.6em;
-	margin-bottom: 0.6em;
-	line-height: 1.6;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  font-size: 1.5rem; 
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .prose > p {
-	margin-top: 1.5em;
-	margin-bottom: 1.25em;
-	font-size: large;
-	line-height: 1.75;
+  margin-top: 1.5em;
+  margin-bottom: 1.25em;
+  font-size: 1.125rem; 
+  line-height: 1.8;
 }
 
 .prose > ul {
@@ -36,10 +44,14 @@ li {
 }
 
 blockquote {
-	display: block;
-	padding: 5px 15px 5px 30px;
-	position: relative;
-	border-left: 5px solid #ea580c;
+  display: block;
+  padding: 1em 2em;
+  border-left: 5px solid #ea580c;
+  background-color: #fdf3ec; 
+  margin: 2em 0;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 html:not(.dark) blockquote {
@@ -69,10 +81,11 @@ blockquote em {
 }
 
 .prose :is(:where(img):not(:where([class~='not-prose'] *))) {
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 0.5rem !important;
-	border-width: 2px;
+  	margin: 1em auto; 
+  	border-width: 2px;
+	display: block; 
+  	max-width: 100%; 
+  	height: auto;
 	border-color: #ea5a0cc2;
 }
 
