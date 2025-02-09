@@ -71,9 +71,8 @@ jobs:
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
 
-      # Updated step: Use a version of upload-pages-artifact that does not reference deprecated upload-artifact v3.
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2.1.0
+        uses: actions/upload-pages-artifact@v1
         with:
           path: ${{ env.BUILD_PATH }}/dist
 
