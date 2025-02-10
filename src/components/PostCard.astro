@@ -15,7 +15,7 @@ const { url, title, img, description, datetime } = Astro.props;
     <Datetime datetime={datetime} />
   </a>
   <div class="lg:flex lg:gap-4 justify-center items-center">
-    <img src={img.url} alt={img.alt} />
+    <img src={img.url} alt={img.alt} class="h-44 object-cover" />
     <p class="my-3 justify-center">{description}</p>
   </div>
 </div>
