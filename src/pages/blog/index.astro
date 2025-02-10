@@ -24,7 +24,7 @@ const postsByLatest = posts.sort((a, b) => {
     class="flex flex-col justify-start max-w-5xl mx-auto p-4 w-full h-full py-10 lg:pt-36"
   >
     <article class="dark:prose-invert prose-lg lg:prose-xl">
-      <h1 class="text-sky-700 dark:text-orange-500 text-center">
+      <h1 class="text-sky-700 dark:text-orange-400 text-center">
         Why-first Frontend
       </h1>
       <img
@@ -32,34 +32,43 @@ const postsByLatest = posts.sort((a, b) => {
         class="justify-self-center"
       />
       <p>
-        Welcome! This blog is now dedicated to exploring <strong>why</strong> certain
-        solutions, techniques, and frameworks were created in the world of frontend
-        development. Instead of just showing <em>how</em> to use them, I'll dive
-        deeper into the <em>problems</em> and <em>constraints</em> that prompted
-        their invention. If you’ve ever wondered why React introduced Hooks, or why
-        Vite emerged despite Webpack dominating the scene, you’re in the right place.
+        Welcome! This blog is dedicated to exploring <em>why</em> certain solutions,
+        techniques, and frameworks were created in the world of frontend development.
+        In this rapidly changing world of the web, sometimes we forget that our job,
+        and the job of the tools that we use, is to provide solutions. Instead of
+        just showing <em>how</em> to use them, I'll dive deeper into the
+        <em>problems</em> and <em>constraints</em> that prompted their invention.
       </p>
       <p>
         Think of it as a guided journey—from the broad question of “Why do we
         even need frontend development?” down to the specifics of “Why do custom
-        hooks exist in React?” or “Why minify code at all?” This shift in
-        perspective will not only help you pass interviews; it will also sharpen
-        your problem-solving skills in real-world projects.
+        hooks exist in React?” or “Why minify code at all?”
       </p>
-      <Separator noPadding={true} />
-      <h2>Recent posts</h2>
+      <p>
+        If you want a longer explanation, you can check the first entry of this
+        guide:
+      </p>
+      <p>
+        <a
+          href="./frontend-guide"
+          class="hover:underline text-sky-700 dark:text-orange-400"
+          >Introducing the Why-First Approach to Frontend Development</a
+        >
+        <Separator noPadding={true} />
+        <h2>Recent posts</h2>
 
-      {
-        postsByLatest.map((post) => (
-          <PostCard
-            url={`./${post.slug}`}
-            title={post.data.title}
-            img={post.data.image}
-            description={post.data.description}
-            datetime={post.data.pubDate}
-          />
-        ))
-      }
+        {
+          postsByLatest.map((post) => (
+            <PostCard
+              url={`./${post.slug}`}
+              title={post.data.title}
+              img={post.data.image}
+              description={post.data.description}
+              datetime={post.data.pubDate}
+            />
+          ))
+        }
+      </p>
     </article>
   </main>
 </Layout>
