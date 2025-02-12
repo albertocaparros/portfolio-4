@@ -4,13 +4,13 @@ pubDate: 2025-02-09T18:30:00Z
 title: Introducing the Why-First Approach to Frontend Development
 href: 'frontend-guide'
 image:
-  url: https://images.unsplash.com/photo-1472437774355-71ab6752b434?q=80&h=250
+  url: https://images.unsplash.com/photo-1472437774355-71ab6752b434?q=80&w=350
   alt: Frontend development books
 tags: ["introduction", "why-first"]
 description: A new series of blog posts dedicated to exploring the reasons and motivations behind the most common frontend tools and practices.
 ---
 
-![Frontend development books](https://images.unsplash.com/photo-1472437774355-71ab6752b434?q=80&h=250)
+![Frontend development books](https://images.unsplash.com/photo-1472437774355-71ab6752b434?q=80&w=350)
 
 # Introducing my approach to Frontend Development learning
 

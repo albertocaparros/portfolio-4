@@ -2,15 +2,15 @@
 author: Alberto Caparrós
 pubDate: 2025-02-10T20:15:00Z
 title: Why Frontend development
-href: 'frontend-guide'
+href: 'why-frontend-development'
 image:
-  url: https://images.unsplash.com/photo-1600132806608-231446b2e7af?q=80&h=250
+  url: https://images.unsplash.com/photo-1600132806608-231446b2e7af?q=80&w=350
   alt: Sketch of a website
 tags: ["why-first"]
 description: Let's go back to the basics, and try to understand how we ended up with this crazy ecosystem of frontend tools and techniques.
 ---
 
-![Sketch of a website](https://images.unsplash.com/photo-1600132806608-231446b2e7af?q=80&h=250)
+![Sketch of a website](https://images.unsplash.com/photo-1600132806608-231446b2e7af?q=80&w=350)
 
 ## The Rise of Rich Web Applications
 
