@@ -6,8 +6,8 @@ const CounterDemo = () => {
 
   const handleClick = () => {
     setCount((c) => c + 1);
-    setLastUpdated('count'); // Highlight the change
-    setTimeout(() => setLastUpdated(null), 500); // Clear highlight after 500ms
+    setLastUpdated('count');
+    setTimeout(() => setLastUpdated(null), 500);
   };
 
   return (

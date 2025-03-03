@@ -62,8 +62,8 @@ const CounterDemo = () => {
 
   const handleClick = () => {
     setCount((c) => c + 1);
-    setLastUpdated('count'); // Track what changed
-    setTimeout(() => setLastUpdated(null), 500); // Reset highlight after 500ms
+    setLastUpdated('count'); 
+    setTimeout(() => setLastUpdated(null), 500); 
   };
 
   return (
@@ -72,10 +72,9 @@ const CounterDemo = () => {
       <p>
         Count: <span style={lastUpdated === 'count' ? { backgroundColor: 'yellow' } : {}}>{count}</span>
       </p>
-      <p>Static text (unchanging)</p>
       <button onClick={handleClick}>Increment</button>
       <p style={{ fontSize: 'small' }}>
-        Click and watch! Only the count updates—thanks, Virtual DOM!
+        When we click, only the count updates. Thanks Virtual DOM!
       </p>
     </div>
   );
