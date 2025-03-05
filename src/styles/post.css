@@ -1,22 +1,22 @@
 .prose > h1 {
-  margin-top: 1em;         
-  margin-bottom: 0.8em; 
-  font-size: 2.25rem; 
-  line-height: 1.2; 
+  margin-top: 1em;
+  margin-bottom: 0.8em;
+  font-size: 2.25rem;
+  line-height: 1.2;
   font-weight: 700;
 }
 
 .prose > h2 {
   margin-top: 1em;
   margin-bottom: 0.8em;
-  font-size: 1.75rem; 
+  font-size: 1.75rem;
   font-weight: 700;
 }
 
 .prose > h3 {
   margin-top: 0.7em;
   margin-bottom: 0.6em;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -24,68 +24,68 @@
 .prose > p {
   margin-top: 1.5em;
   margin-bottom: 1.25em;
-  font-size: 1.125rem; 
+  font-size: 1.125rem;
   line-height: 1.8;
 }
 
 .prose > ul {
-	list-style-type: disc;
-	margin-top: 1.25em;
-	margin-bottom: 1.25em;
-	padding-left: 1.625em;
+  list-style-type: disc;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.625em;
 }
 
 li {
-	display: list-item;
-  font-size: 1.125rem; 
+  display: list-item;
+  font-size: 1.125rem;
 }
 
 blockquote {
-	display: block;
-	padding: 5px 15px 5px 30px;
-	position: relative;
-	border-left: 5px solid #f97316;
+  display: block;
+  padding: 5px 15px 5px 30px;
+  position: relative;
+  border-left: 5px solid #f97316;
 }
 
 html:not(.dark) blockquote {
-	border-left-color: #0369a1;
+  border-left-color: #0369a1;
 }
 
 blockquote a {
-	text-decoration: none;
-	cursor: pointer;
-	padding: 0 3px;
-	color: #f97316;
-	text-decoration: underline;
-	text-decoration-style: dashed;
-	text-underline-offset: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #f97316;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 6px;
 }
 
 html:not(.dark) blockquote a {
-	color: #0369a1;
+  color: #0369a1;
 }
 
 blockquote a:hover {
-	color: #666;
+  color: #666;
 }
 
 blockquote em {
-	font-style: italic;
+  font-style: italic;
 }
 
 .prose :is(:where(img):not(:where([class~='not-prose'] *))) {
-  	margin: 1em auto; 
-  	border-width: 2px;
-	display: block; 
-  	max-width: 100%; 
-  	height: auto;
-	border-color: #f97316;
+  margin: 1em auto;
+  border-width: 2px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-color: #f97316;
 }
 
 html:not(.dark) .prose :is(:where(img):not(:where([class~='not-prose'] *))) {
-	border-color: #036aa1c2;
+  border-color: #036aa1c2;
 }
 
-img{
-	width:350px;
+img {
+  width: 350px;
 }

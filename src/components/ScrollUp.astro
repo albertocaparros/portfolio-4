@@ -3,24 +3,24 @@ import ArrowUp from '../icons/ArrowUp.astro';
 ---
 
 <a
-	id='scroll-up'
-	href='#'
-	class='bg-blue-200 hover:bg-blue-300 dark:bg-sky-800 dark:hover:bg-sky-700 transition-all flex w-8 h-8 rounded fixed bottom-16 right-4 justify-center items-center opacity-90'
-	><ArrowUp /></a
+  id="scroll-up"
+  href="#"
+  class="fixed bottom-16 right-4 flex h-8 w-8 items-center justify-center rounded bg-blue-200 opacity-90 transition-all hover:bg-blue-300 dark:bg-sky-800 dark:hover:bg-sky-700"
+  ><ArrowUp /></a
 >
 
 <script>
-	var scrollUp = () => {
-		const scrollUp = document.getElementById('scroll-up');
+  var scrollUp = () => {
+    const scrollUp = document.getElementById('scroll-up');
 
-		if (globalThis.scrollY >= screen.availHeight) {
-			scrollUp.classList.add('bottom-16');
-			scrollUp.classList.remove('-bottom-16');
-		} else {
-			scrollUp.classList.add('-bottom-16');
-			scrollUp.classList.remove('bottom-16');
-		}
-	};
+    if (globalThis.scrollY >= screen.availHeight) {
+      scrollUp.classList.add('bottom-16');
+      scrollUp.classList.remove('-bottom-16');
+    } else {
+      scrollUp.classList.add('-bottom-16');
+      scrollUp.classList.remove('bottom-16');
+    }
+  };
 
-	window.addEventListener('scroll', scrollUp);
+  window.addEventListener('scroll', scrollUp);
 </script>

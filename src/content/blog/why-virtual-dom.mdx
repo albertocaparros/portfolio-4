@@ -6,20 +6,21 @@ href: 'why-virtual-dom'
 image:
   url: https://images.unsplash.com/photo-1637664067109-a6a00840d894?q=80&w=350
   alt: A human shaped group of lights
-tags: ["why-first", "react"]
+tags: ['why-first', 'react']
 description: Exploring why React introduced the Virtual DOM, the problems it solves, and how it shapes modern frontend development.
 ---
 
 ![A human shaped group of lights](https://images.unsplash.com/photo-1637664067109-a6a00840d894?q=80&w=350)
+
 ## Why the Virtual DOM in React?
 
-As we’ve traced the evolution of frontend development, we’ve seen how the shift to rich, interactive web apps demanded new ways of thinking. By the time React arrived in 2013, developers were wrestling with a big problem: how do you keep a dynamic UI fast and manageable when user interactions trigger constant updates? Enter the Virtual DOM—a clever solution that’s become a cornerstone of React (and Preact, too!). But *why* did we need it, and what makes it so special? Let’s break it down.
+As we’ve traced the evolution of frontend development, we’ve seen how the shift to rich, interactive web apps demanded new ways of thinking. By the time React arrived in 2013, developers were wrestling with a big problem: how do you keep a dynamic UI fast and manageable when user interactions trigger constant updates? Enter the Virtual DOM—a clever solution that’s become a cornerstone of React (and Preact, too!). But _why_ did we need it, and what makes it so special? Let’s break it down.
 
 ### The Problem: DOM Thrashing and Complexity
 
 Before React, updating the UI often meant directly manipulating the DOM—think jQuery’s `.html()` or `.append()`. This worked fine for simple pages, but as web apps grew more interactive (think real-time feeds or dynamic forms), the cracks showed.
 
-Every DOM change—adding a list item, updating text, toggling a class—triggers a *reflow* or *repaint* in the browser. These operations are expensive, especially when chained together. Imagine a chat app: a new message arrives, you update the message list, adjust a counter, and highlight the sender. That’s multiple DOM writes, each slowing things down. Worse, developers had to manually track what changed and how to update it, leading to brittle, hard-to-maintain code.
+Every DOM change—adding a list item, updating text, toggling a class—triggers a _reflow_ or _repaint_ in the browser. These operations are expensive, especially when chained together. Imagine a chat app: a new message arrives, you update the message list, adjust a counter, and highlight the sender. That’s multiple DOM writes, each slowing things down. Worse, developers had to manually track what changed and how to update it, leading to brittle, hard-to-maintain code.
 
 The raw DOM wasn’t built for this level of dynamism. It’s a live, heavy structure, and poking it repeatedly was like trying to renovate a house while people are still living in it—messy and inefficient.
 
@@ -36,7 +37,7 @@ But there’s a trade-off. Maintaining and diffing the Virtual DOM adds some ove
 So, what do we get out of this?
 
 1. **Performance**: By batching updates and minimizing real DOM writes, React avoids the thrashing of old-school approaches. One efficient update beats ten scattered ones.
-2. **Simplicity**: Developers don’t need to micromanage DOM changes. You describe what the UI *should* look like (via components and state), and React figures out the rest. Less “how,” more “what.”
+2. **Simplicity**: Developers don’t need to micromanage DOM changes. You describe what the UI _should_ look like (via components and state), and React figures out the rest. Less “how,” more “what.”
 3. **Predictability**: The diffing process ensures consistent rendering, reducing bugs from out-of-sync UI and data.
 
 This shift turned frontend development from a DOM-juggling act into a declarative art form. It’s no wonder Preact, Vue, and others adopted similar ideas!
@@ -62,15 +63,20 @@ const CounterDemo = () => {
 
   const handleClick = () => {
     setCount((c) => c + 1);
-    setLastUpdated('count'); 
-    setTimeout(() => setLastUpdated(null), 500); 
+    setLastUpdated('count');
+    setTimeout(() => setLastUpdated(null), 500);
   };
 
   return (
     <div>
       <h3>Virtual DOM Demo</h3>
       <p>
-        Count: <span style={lastUpdated === 'count' ? { backgroundColor: 'yellow' } : {}}>{count}</span>
+        Count:{' '}
+        <span
+          style={lastUpdated === 'count' ? { backgroundColor: 'yellow' } : {}}
+        >
+          {count}
+        </span>
       </p>
       <button onClick={handleClick}>Increment</button>
       <p style={{ fontSize: 'small' }}>
@@ -84,4 +90,5 @@ export default CounterDemo;
 ```
 
 ### Why It Matters
+
 The Virtual DOM isn’t just a React quirk—it’s a response to a real problem: making dynamic UIs efficient and developer-friendly. Understanding why it exists equips you to reason about performance trade-offs (e.g., when it’s overkill vs. essential) and appreciate how frameworks evolve to meet user demands.

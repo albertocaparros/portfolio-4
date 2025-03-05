@@ -3,54 +3,56 @@ import Pill from './Pill.astro';
 ---
 
 <section
-	id='portfolio'
-	class='flex min-h-screen sm:min-h-min my-6 w-full lg:max-w-screen-lg lg:mx-auto lg:text-2xl lg:py-28'>
-	<div class='flex flex-col gap-8 my-auto p-2 text-center w-full'>
-		<div>
-			<h2 class='text-4xl font-bold'>Portfolio</h2>
-			<p class='text-sm py-1 lg:text-lg' data-i18n-key='portfolio-subtitle'>
-				Personal projects that I have worked on recently to showcase my skills
-				and learn new things.
-			</p>
-		</div>
+  id="portfolio"
+  class="my-6 flex min-h-screen w-full sm:min-h-min lg:mx-auto lg:max-w-screen-lg lg:py-28 lg:text-2xl"
+>
+  <div class="my-auto flex w-full flex-col gap-8 p-2 text-center">
+    <div>
+      <h2 class="text-4xl font-bold">Portfolio</h2>
+      <p class="py-1 text-sm lg:text-lg" data-i18n-key="portfolio-subtitle">
+        Personal projects that I have worked on recently to showcase my skills
+        and learn new things.
+      </p>
+    </div>
 
-		<div class='flex flex-col gap-6'>
-			<a href='https://dailys-board.vercel.app/' target='_blank'
-				><img
-					src={'img/dailys-board-screenshot.jpg'}
-					alt='proyecto1'
-					class='rounded-lg w-80 mx-auto'
-				/></a
-			>
-			<h3 class='text-2xl font-semibold lg:text-2xl'>Dailys board</h3>
-			<p class='text-sm lg:text-lg' data-i18n-key='dailys-board-description'>
-				With remote work we lost the good old analogic board that helped the
-				team move the daily meeting forward. Tired of awkward silents and people
-				asking who had already talked, I created this simple app to help my
-				team. Currently it is using localstorage for data persistency, and I'm
-				working on adding a toast notification feature.
-			</p>
-			<ul class='flex gap-2 text-sm flex-wrap justify-center'>
-				<Pill tag={'react'} />
-				<Pill tag={'tailwind'} />
-				<Pill tag={'cypress'} />
-				<Pill tag={'Hooks'} />
-			</ul>
-			<div class='flex justify-center gap-4'>
-				<a
-					class='bg-blue-200 hover:bg-blue-300 dark:bg-sky-800 dark:hover:bg-sky-700 rounded py-3 px-6 border-black border'
-					href='https://dailys-board.vercel.app/'
-					target='_blank'>
-					<span class='font-semibold'>Demo</span></a
-				>
-				<a
-					href='https://github.com/albertocaparros/dailys-board'
-					target='_blank'
-					class='bg-blue-200 hover:bg-blue-300 dark:bg-sky-800 dark:hover:bg-sky-700 rounded py-3 px-6 border-black border'
-					><i class='uil uil-brackets-curly button_icon'></i>
-					<span data-i18n-key='code' class='font-semibold'>Code</span></a
-				>
-			</div>
-		</div>
-	</div>
+    <div class="flex flex-col gap-6">
+      <a href="https://dailys-board.vercel.app/" target="_blank"
+        ><img
+          src={'img/dailys-board-screenshot.jpg'}
+          alt="proyecto1"
+          class="mx-auto w-80 rounded-lg"
+        /></a
+      >
+      <h3 class="text-2xl font-semibold lg:text-2xl">Dailys board</h3>
+      <p class="text-sm lg:text-lg" data-i18n-key="dailys-board-description">
+        With remote work we lost the good old analogic board that helped the
+        team move the daily meeting forward. Tired of awkward silents and people
+        asking who had already talked, I created this simple app to help my
+        team. Currently it is using localstorage for data persistency, and I'm
+        working on adding a toast notification feature.
+      </p>
+      <ul class="flex flex-wrap justify-center gap-2 text-sm">
+        <Pill tag={'react'} />
+        <Pill tag={'tailwind'} />
+        <Pill tag={'cypress'} />
+        <Pill tag={'Hooks'} />
+      </ul>
+      <div class="flex justify-center gap-4">
+        <a
+          class="rounded border border-black bg-blue-200 px-6 py-3 hover:bg-blue-300 dark:bg-sky-800 dark:hover:bg-sky-700"
+          href="https://dailys-board.vercel.app/"
+          target="_blank"
+        >
+          <span class="font-semibold">Demo</span></a
+        >
+        <a
+          href="https://github.com/albertocaparros/dailys-board"
+          target="_blank"
+          class="rounded border border-black bg-blue-200 px-6 py-3 hover:bg-blue-300 dark:bg-sky-800 dark:hover:bg-sky-700"
+          ><i class="uil uil-brackets-curly button_icon"></i>
+          <span data-i18n-key="code" class="font-semibold">Code</span></a
+        >
+      </div>
+    </div>
+  </div>
 </section>

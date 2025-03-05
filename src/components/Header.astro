@@ -1,21 +1,21 @@
 ---
-import Apps from "../icons/Apps.astro";
-import I18n from "./I18n.astro";
-import ThemeToggler from "./ThemeToggler";
+import Apps from '../icons/Apps.astro';
+import I18n from './I18n.astro';
+import ThemeToggler from './ThemeToggler';
 ---
 
 <header
   id="header"
-  class="shadow-[0px_-1px_4px] shadow-slate-400 z-40 w-full fixed bottom-0 bg-sky-50 text-slate-700 dark:bg-slate-800 dark:text-neutral-50 h-12 lg:top-0 lg:w-full lg:fixed lg:flex lg:justify-around lg:items-center lg:h-24"
+  class="fixed bottom-0 z-40 h-12 w-full bg-sky-50 text-slate-700 shadow-[0px_-1px_4px] shadow-slate-400 dark:bg-slate-800 dark:text-neutral-50 lg:fixed lg:top-0 lg:flex lg:h-24 lg:w-full lg:items-center lg:justify-around"
 >
   <nav
-    class="h-full flex text-center mx-auto gap-2 items-center justify-between lg:w-full"
+    class="mx-auto flex h-full items-center justify-between gap-2 text-center lg:w-full"
   >
-    <a href="/" class="ml-4 lg:text-xl lg:font-medium lg:ml-10"
+    <a href="/" class="ml-4 lg:ml-10 lg:text-xl lg:font-medium"
       >Alberto Caparrós</a
     >
 
-    <div class="mr-4 nav-header flex gap-4 items-center lg:mr-10">
+    <div class="nav-header mr-4 flex items-center gap-4 lg:mr-10">
       <div class="hidden lg:block">
         <a
           href="#home"
@@ -43,26 +43,26 @@ import ThemeToggler from "./ThemeToggler";
       <button><ThemeToggler client:load /></button>
       <button><I18n /></button>
       <button class="lg:hidden"
-        ><Apps height={5} width={5} id={"open-nav-menu"} /></button
+        ><Apps height={5} width={5} id={'open-nav-menu'} /></button
       >
     </div>
   </nav>
 </header>
 
 <script>
-  const openButton = document.getElementById("open-nav-menu");
+  const openButton = document.getElementById('open-nav-menu');
 
   var scrollUp = () => {
-    const navMenu = document.getElementById("nav-menu");
-    navMenu.classList.add("bottom-0");
-    navMenu.classList.remove("-bottom-80");
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.add('bottom-0');
+    navMenu.classList.remove('-bottom-80');
   };
 
-  openButton.addEventListener("click", scrollUp);
+  openButton.addEventListener('click', scrollUp);
 </script>
 
 <script>
-  const sections = document.querySelectorAll("section[id]");
+  const sections = document.querySelectorAll('section[id]');
 
   function scrollActive() {
     const scrollY = window.scrollY;
@@ -70,19 +70,19 @@ import ThemeToggler from "./ThemeToggler";
     sections.forEach((current) => {
       const sectionHeight = (current as HTMLElement).offsetHeight;
       const sectionTop = (current as HTMLElement).offsetTop - 90;
-      let sectionId = current.getAttribute("id");
+      let sectionId = current.getAttribute('id');
 
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         document
-          .querySelector(".nav-header a[href*=" + sectionId + "]")
-          .classList.add("text-cyan-600");
+          .querySelector('.nav-header a[href*=' + sectionId + ']')
+          .classList.add('text-cyan-600');
       } else {
         document
-          .querySelector(".nav-header a[href*=" + sectionId + "]")
-          .classList.remove("text-cyan-600");
+          .querySelector('.nav-header a[href*=' + sectionId + ']')
+          .classList.remove('text-cyan-600');
       }
     });
   }
 
-  window.addEventListener("scroll", scrollActive);
+  window.addEventListener('scroll', scrollActive);
 </script>

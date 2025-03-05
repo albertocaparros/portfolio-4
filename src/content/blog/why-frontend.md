@@ -6,7 +6,7 @@ href: 'why-frontend-development'
 image:
   url: https://images.unsplash.com/photo-1600132806608-231446b2e7af?q=80&w=350
   alt: Sketch of a website
-tags: ["why-first"]
+tags: ['why-first']
 description: Let's go back to the basics, and try to understand how we ended up with this crazy ecosystem of frontend tools and techniques.
 ---
 
@@ -31,13 +31,13 @@ The growing complexity led to the early adoption of MVC (Model-View-Controller) 
 As web applications grew even more complex, the demands on the client side led to the birth of robust frameworks that would not only manage interactivity but also simplify development at scale.
 
 - **Angular**:
-Originating as AngularJS and later re-architected into Angular 2+, Google’s Angular introduced a comprehensive, opinionated framework. It came equipped with dependency injection, two-way data binding, and a complete suite of tools for testing and building enterprise-level applications. This approach offered a clear path for developers to handle large-scale projects with consistent patterns.
+  Originating as AngularJS and later re-architected into Angular 2+, Google’s Angular introduced a comprehensive, opinionated framework. It came equipped with dependency injection, two-way data binding, and a complete suite of tools for testing and building enterprise-level applications. This approach offered a clear path for developers to handle large-scale projects with consistent patterns.
 
 - **React**:
-Developed by Facebook, React shifted the focus solely to the view layer. Its component-based architecture, virtual DOM, and one-way data flow provided a flexible and efficient way to build interactive user interfaces. React’s minimal core and the rich ecosystem that grew around it (such as Redux for state management) made it highly adaptable to various project needs.
+  Developed by Facebook, React shifted the focus solely to the view layer. Its component-based architecture, virtual DOM, and one-way data flow provided a flexible and efficient way to build interactive user interfaces. React’s minimal core and the rich ecosystem that grew around it (such as Redux for state management) made it highly adaptable to various project needs.
 
 - **Vue**:
-Vue emerged as a progressive framework that blended the strengths of both Angular and React. It offered an approachable learning curve, flexibility, and a set of integrated features ideal for building dynamic user interfaces. Vue’s scalability and simplicity have earned it a strong following among developers working on both small projects and large-scale applications.
+  Vue emerged as a progressive framework that blended the strengths of both Angular and React. It offered an approachable learning curve, flexibility, and a set of integrated features ideal for building dynamic user interfaces. Vue’s scalability and simplicity have earned it a strong following among developers working on both small projects and large-scale applications.
 
 ## Why This Evolution?
 
@@ -45,4 +45,4 @@ All three frameworks embraced a component-based model, which naturally arose fro
 
 As user interactions and dynamic data became more prevalent, managing application state efficiently and ensuring high performance were critical. Frameworks evolved to address these challenges, whether through built-in solutions (as in Angular) or via companion libraries (as in React).
 
-The rise of these frameworks was also fueled by the strong communities and ecosystems that formed around them. This support network accelerated the development of tools, best practices, and learning resources, further solidifying their roles in modern web development. 
+The rise of these frameworks was also fueled by the strong communities and ecosystems that formed around them. This support network accelerated the development of tools, best practices, and learning resources, further solidifying their roles in modern web development.

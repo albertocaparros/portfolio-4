@@ -6,7 +6,7 @@ href: 'why-first-css'
 image:
   url: https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?q=80&w=350
   alt: Sketch of an application layout
-tags: ["why-first", "css"]
+tags: ['why-first', 'css']
 description: Taking a look at some of the most important CSS features, what problem do they solve and how do they manage to do so.
 ---
 
@@ -54,7 +54,7 @@ In large projects, global CSS can quickly become unmanageable. Conflicting style
 
 ## Preprocessors and Postprocessors
 
-Early CSS lacked features such as variables, nesting, and mixins, which made it cumbersome to write *DRY* (Don’t Repeat Yourself) and maintainable stylesheets. CSS preprocessors (like *Sass* and *LESS*) and postprocessors (like *PostCSS*) extend CSS with powerful features that streamline development. They allow for more expressive syntax, automate repetitive tasks, and facilitate a more organized and maintainable code structure. Many of these features have influenced native CSS, helping shape modern standards.
+Early CSS lacked features such as variables, nesting, and mixins, which made it cumbersome to write _DRY_ (Don’t Repeat Yourself) and maintainable stylesheets. CSS preprocessors (like _Sass_ and _LESS_) and postprocessors (like _PostCSS_) extend CSS with powerful features that streamline development. They allow for more expressive syntax, automate repetitive tasks, and facilitate a more organized and maintainable code structure. Many of these features have influenced native CSS, helping shape modern standards.
 
 ## Performance Optimization in CSS
 

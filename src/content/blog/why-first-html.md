@@ -6,10 +6,9 @@ href: 'why-first-html'
 image:
   url: https://cdn.pixabay.com/photo/2018/02/22/17/27/programming-3173456_960_720.png
   alt: A screen with closing html tag
-tags: ["why-first", "html"]
+tags: ['why-first', 'html']
 description: Why did HTML become the main language of the web? How did it evolve to optimize its efficiency and facilitate the development of modern web pages?
 ---
-
 
 ![A screen with closing html tag](https://cdn.pixabay.com/photo/2018/02/22/17/27/programming-3173456_960_720.png)
 
@@ -20,13 +19,14 @@ The DOCTYPE declaration is a directive that tells the browser which version of H
 ```
 &lt;!doctype html&gt;
 ```
+
 And serves two purposes:
 
 - **Triggers Standards Mode**:
-It instructs browsers to render the document using the latest web standards rather than falling back to “quirks mode.” Quirks mode emulates non-standard, legacy behavior from older browsers, which can lead to inconsistent layouts and unexpected styling issues.
+  It instructs browsers to render the document using the latest web standards rather than falling back to “quirks mode.” Quirks mode emulates non-standard, legacy behavior from older browsers, which can lead to inconsistent layouts and unexpected styling issues.
 
 - **Signals Modern HTML Usage**:
-With HTML5, the need for verbose DTD (Document Type Definition) references was eliminated. The simplified DOCTYPE confirms that your document adheres to the modern, semantic standards of HTML5, ensuring consistency across all modern browsers.
+  With HTML5, the need for verbose DTD (Document Type Definition) references was eliminated. The simplified DOCTYPE confirms that your document adheres to the modern, semantic standards of HTML5, ensuring consistency across all modern browsers.
 
 ## Metadata: Character encoding
 
@@ -45,15 +45,15 @@ The tag **&lt;meta name="viewport" content="width=device-width, initial-scale=1"
 Semantic markup solves the problem of ambiguous, non-descriptive HTML by providing meaning to content structure. This approach addresses several key problems:
 
 - **Accessibility**:
-Without semantic markup, assistive technologies (such as screen readers) struggle to interpret the structure and meaning of content. Using elements like &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, and &lt;footer&gt; provides clear landmarks that help users with disabilities navigate a page effectively.
+  Without semantic markup, assistive technologies (such as screen readers) struggle to interpret the structure and meaning of content. Using elements like &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, and &lt;footer&gt; provides clear landmarks that help users with disabilities navigate a page effectively.
 
 - **Search Engine Optimization (SEO)**:
-Search engines rely on semantic cues to understand the hierarchy and context of content. When you use semantic elements, you improve a page's clarity, which can lead to better indexing and higher search rankings.
+  Search engines rely on semantic cues to understand the hierarchy and context of content. When you use semantic elements, you improve a page's clarity, which can lead to better indexing and higher search rankings.
 
 - **Maintainability and Readability**
-Semantic markup makes the code more self-explanatory. Developers can more easily understand and maintain a codebase when the structure reflects the actual content, reducing the risk of errors and simplifying future updates.
+  Semantic markup makes the code more self-explanatory. Developers can more easily understand and maintain a codebase when the structure reflects the actual content, reducing the risk of errors and simplifying future updates.
 
-## ARIA 
+## ARIA
 
 ARIA (Accessible Rich Internet Applications) is a set of attributes designed to enhance the accessibility of web content, especially for dynamic or custom UI components that aren’t natively accessible.
 
@@ -61,7 +61,6 @@ Modern web applications often involve interactive and dynamic components—like 
 
 ARIA introduces a series of attributes (such as role, aria-label, aria-labelledby, aria-describedby, aria-expanded, and aria-hidden) that you can add to HTML elements to provide explicit information about their purpose and behavior
 
-- **Roles**: Define what an element represents (e.g., *role="dialog"* for a modal or *role="navigation"* for a navigation bar).
-- **States and Properties**: Convey dynamic states (e.g., *aria-expanded="true"* on an expandable menu) and relationships between elements (e.g., linking labels with *aria-labelledby*).
+- **Roles**: Define what an element represents (e.g., _role="dialog"_ for a modal or _role="navigation"_ for a navigation bar).
+- **States and Properties**: Convey dynamic states (e.g., _aria-expanded="true"_ on an expandable menu) and relationships between elements (e.g., linking labels with _aria-labelledby_).
 - **Descriptive Labels**: Provide text alternatives and descriptions for custom components that lack inherent semantic meaning.
-

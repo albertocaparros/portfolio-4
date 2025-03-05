@@ -6,10 +6,9 @@ href: 'why-first-js'
 image:
   url: https://images.unsplash.com/photo-1687603921109-46401b201195?q=80&w=350
   alt: Code editor with several javascript and jsx files on its menu
-tags: ["why-first", "js"]
+tags: ['why-first', 'js']
 description: A detailed "why-first" analysis of the most important JavaScript features. Each topic is explained in terms of the problems it was designed to solve and how it addresses those challenges.
 ---
-
 
 ![Code editor with several javascript and jsx files on ](https://images.unsplash.com/photo-1687603921109-46401b201195?q=80&w=350)
 
@@ -35,7 +34,7 @@ Closures allow a function to “remember” the environment in which it was crea
 ```javascript
 function counter() {
   let count = 0;
-  return function() {
+  return function () {
     count += 1;
     return count;
   };
@@ -52,7 +51,7 @@ Web applications frequently perform tasks like fetching data from a server or re
 
 - **Callbacks**: Allow asynchronous functions to signal when they’re done, so the browser can continue executing other code.
 
-- **Promises**: Introduced a cleaner, chainable way to handle asynchronous results. With promises, you can attach *.then()* and *.catch()*  handlers, reducing nesting and making error handling more straightforward.
+- **Promises**: Introduced a cleaner, chainable way to handle asynchronous results. With promises, you can attach _.then()_ and _.catch()_ handlers, reducing nesting and making error handling more straightforward.
 
 - **Async/Await**: Built on top of promises, async/await syntax lets you write asynchronous code in a synchronous style. This not only makes the code easier to read and maintain but also reduces the complexity of error handling with try/catch blocks.
 
@@ -83,28 +82,28 @@ console.log('End');
 
 ## ES6+ Features
 
-### Arrow functions 
+### Arrow functions
 
-Traditional function expressions in JavaScript have their own *this* context, which can lead to confusion when functions are used as callbacks. Developers often had to bind functions explicitly to maintain the correct context, making the code more verbose and error-prone.
+Traditional function expressions in JavaScript have their own _this_ context, which can lead to confusion when functions are used as callbacks. Developers often had to bind functions explicitly to maintain the correct context, making the code more verbose and error-prone.
 
-Arrow functions provide a concise syntax and, importantly, they inherit the *this* value from their enclosing context. This behavior eliminates the need for workarounds like *.bind(this)* or storing the context in a variable (*var self = this*), leading to cleaner and more intuitive code.
+Arrow functions provide a concise syntax and, importantly, they inherit the _this_ value from their enclosing context. This behavior eliminates the need for workarounds like _.bind(this)_ or storing the context in a variable (_var self = this_), leading to cleaner and more intuitive code.
 
 ```javascript
 const obj = {
   value: 42,
-  printValue: function() {
+  printValue: function () {
     setTimeout(() => {
       console.log(this.value); // correctly prints 42
     }, 1000);
-  }
+  },
 };
 ```
 
-### Template Literals 
+### Template Literals
 
 Concatenating strings and managing multi-line content was clumsy using traditional string syntax, often leading to unreadable code and bugs when incorporating variables.
 
-Template literals use backticks *(`)* to allow multi-line strings and embedded expressions with *${...}* syntax. This not only makes the code more readable but also simplifies the process of building dynamic strings.
+Template literals use backticks _(`)_ to allow multi-line strings and embedded expressions with _${...}_ syntax. This not only makes the code more readable but also simplifies the process of building dynamic strings.
 
 ```javascript
 const name = 'Alice';

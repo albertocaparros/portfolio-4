@@ -5,16 +5,18 @@ const blogCollection = defineCollection({
     title: z.string(),
     pubDate: z.date(),
     description: z.string(),
-    image: z.union([
-      z.string(),
-      z.object({
-        url: z.string(),
-        alt: z.string(),
-      }),
-    ]).optional(),
+    image: z
+      .union([
+        z.string(),
+        z.object({
+          url: z.string(),
+          alt: z.string(),
+        }),
+      ])
+      .optional(),
     href: z.string().optional(),
     author: z.string().optional(),
-    tags: z.array(z.string()).optional()
+    tags: z.array(z.string()).optional(),
   }),
 });
 

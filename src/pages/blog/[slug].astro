@@ -1,17 +1,17 @@
 ---
-import Layout from "../../layouts/BlogLayout.astro";
-import { getCollection, render } from "astro:content";
+import Layout from '../../layouts/BlogLayout.astro';
+import { getCollection, render } from 'astro:content';
 
 // Export getStaticPaths to tell Astro which blog post slugs to build.
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection('blog');
   return posts.map((post) => ({
     params: { slug: post.slug },
   }));
 }
 
 const { slug } = Astro.params;
-const posts = await getCollection("blog");
+const posts = await getCollection('blog');
 const post = posts.find((p) => p.slug === slug);
 
 if (!post) {

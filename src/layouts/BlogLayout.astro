@@ -1,10 +1,10 @@
 ---
-import "../styles/post.css";
-import Datetime from "../components/Datetime";
-import Layout from "./Layout.astro";
-import BlogHeader from "../components/BlogHeader.astro";
-import BlogNavMenu from "../components/BlogNavMenu.astro";
-import ArrowLeft from "../icons/ArrowLeft.astro";
+import '../styles/post.css';
+import Datetime from '../components/Datetime';
+import Layout from './Layout.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import BlogNavMenu from '../components/BlogNavMenu.astro';
+import ArrowLeft from '../icons/ArrowLeft.astro';
 
 const {
   data: { title, pubDate },
@@ -16,10 +16,10 @@ const {
   <BlogNavMenu />
 
   <main
-    class="flex flex-col justify-start max-w-5xl mx-auto p-4 w-full h-full py-10 lg:pt-36"
+    class="mx-auto flex h-full w-full max-w-5xl flex-col justify-start p-4 py-10 lg:pt-36"
   >
     <button
-      class="flex align-middle items-center focus-outline hover:opacity-75 text-left my-2"
+      class="focus-outline my-2 flex items-center text-left align-middle hover:opacity-75"
       onclick="
 			history.back()
 			"
@@ -31,14 +31,14 @@ const {
     <h1 class="text-4xl text-sky-700 dark:text-orange-400">
       {title}
     </h1>
-    <div class="flex items-center my-2 opacity-80 space-x-2">
+    <div class="my-2 flex items-center space-x-2 opacity-80">
       <p class="text-sm">
         <Datetime datetime={pubDate} size="lg" className="my-2" />
       </p>
     </div>
     <article
       role="article"
-      class="prose lg:prose-xl dark:prose-invert mx-auto w-full"
+      class="prose mx-auto w-full dark:prose-invert lg:prose-xl"
     >
       <slot />
     </article>

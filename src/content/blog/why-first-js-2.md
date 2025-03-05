@@ -6,10 +6,9 @@ href: 'why-first-js-2'
 image:
   url: https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=350
   alt: Svelte code showing some imports
-tags: ["why-first", "js"]
+tags: ['why-first', 'js']
 description: A detailed "why-first" analysis of the most important JavaScript features. Each topic is explained in terms of the problems it was designed to solve and how it addresses those challenges.
 ---
-
 
 ![Svelte code showing some imports](https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=350)
 
@@ -21,7 +20,9 @@ ES6 introduced a module system that allows developers to encapsulate code in ind
 
 ```javascript
 // math.js
-export function add(a, b) { return a + b; }
+export function add(a, b) {
+  return a + b;
+}
 
 // main.js
 import { add } from './math.js';
@@ -30,9 +31,9 @@ console.log(add(2, 3));
 
 ## Type Coercion and Equality
 
-JavaScript’s dynamic typing and automatic type conversion (coercion) can lead to unexpected behavior when comparing values. For example, using the loose equality operator (*==*) might yield surprising results due to implicit type conversion, leading to subtle bugs.
+JavaScript’s dynamic typing and automatic type conversion (coercion) can lead to unexpected behavior when comparing values. For example, using the loose equality operator (_==_) might yield surprising results due to implicit type conversion, leading to subtle bugs.
 
-By understanding the difference between loose equality (*==*) and strict equality (*===*), developers can avoid unintended type coercion. Strict equality does not perform type conversion, ensuring that comparisons are more predictable and reducing errors in logic.
+By understanding the difference between loose equality (_==_) and strict equality (_===_), developers can avoid unintended type coercion. Strict equality does not perform type conversion, ensuring that comparisons are more predictable and reducing errors in logic.
 
 ```javascript
 console.log(0 == '0');  // true (loose equality)
@@ -52,7 +53,7 @@ JavaScript’s support for first-class functions and higher-order functions enab
 
 ```javascript
 const numbers = [1, 2, 3, 4];
-const doubled = numbers.map(num => num * 2);
+const doubled = numbers.map((num) => num * 2);
 console.log(doubled); // [2, 4, 6, 8]
 ```
 

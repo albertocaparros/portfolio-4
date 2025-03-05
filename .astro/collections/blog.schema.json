@@ -41,10 +41,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "url",
-                "alt"
-              ],
+              "required": ["url", "alt"],
               "additionalProperties": false
             }
           ]
@@ -65,11 +62,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "title",
-        "pubDate",
-        "description"
-      ],
+      "required": ["title", "pubDate", "description"],
       "additionalProperties": false
     }
   },

@@ -15,16 +15,16 @@
     <link rel="icon" type="image/png" href="/favicon.svg" />
 
     <script is:inline>
-      const isDarkMode = localStorage.getItem("theme");
+      const isDarkMode = localStorage.getItem('theme');
       const theme =
-        isDarkMode === "dark" ? "scroll-smooth dark" : "scroll-smooth";
+        isDarkMode === 'dark' ? 'scroll-smooth dark' : 'scroll-smooth';
 
-      document.querySelector("html").className = theme;
+      document.querySelector('html').className = theme;
     </script>
   </head>
   <body>
     <div
-      class="bg-sky-50 text-slate-700 dark:bg-slate-800 dark:text-neutral-50 mb-12 lg:mb-0 min-h-screen"
+      class="mb-12 min-h-screen bg-sky-50 text-slate-700 dark:bg-slate-800 dark:text-neutral-50 lg:mb-0"
     >
       <slot />
     </div>
