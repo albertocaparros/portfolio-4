@@ -78,7 +78,9 @@ const CounterDemo = () => {
           {count}
         </span>
       </p>
-      <button onClick={handleClick}>Increment</button>
+      <button aria-label="Increment" onClick={handleClick}>
+        Increment
+      </button>
       <p style={{ fontSize: 'small' }}>
         When we click, only the count updates. Thanks Virtual DOM!
       </p>

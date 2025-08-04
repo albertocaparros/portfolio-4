@@ -77,6 +77,7 @@ const PostsSection = ({ posts, allTags }) => {
       {totalPages > 1 && (
         <div class="mb-4 flex items-center justify-center gap-4 text-2xl">
           <button
+            aria-label="Previous page"
             onClick={goToPreviousPage}
             disabled={currentPage === 1}
             class="text-sky-700 hover:underline disabled:cursor-not-allowed disabled:opacity-50 dark:text-orange-400"
@@ -87,6 +88,7 @@ const PostsSection = ({ posts, allTags }) => {
             {currentPage}/{totalPages}
           </span>
           <button
+            aria-label={'Next page'}
             onClick={goToNextPage}
             disabled={currentPage === totalPages}
             class="text-sky-700 hover:underline disabled:cursor-not-allowed disabled:opacity-50 dark:text-orange-400"

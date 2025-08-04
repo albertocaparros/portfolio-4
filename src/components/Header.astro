@@ -40,9 +40,9 @@ import ThemeToggler from './ThemeToggler';
         </a>
         <a href="/blog/" class="ml-4 lg:text-xl lg:font-medium"> Blog</a>
       </div>
-      <button><ThemeToggler client:load /></button>
-      <button><I18n /></button>
-      <button class="lg:hidden"
+      <button aria-label="Toggle theme"><ThemeToggler client:load /></button>
+      <button aria-label="Toggle language"><I18n /></button>
+      <button class="lg:hidden" aria-label="Open navigation menu"
         ><Apps height={5} width={5} id={'open-nav-menu'} /></button
       >
     </div>

@@ -28,14 +28,16 @@ import QualificationsCard from './QualificationsCard.astro';
       </div>
 
       <QualificationsCard
-        imgSrc="logo-unit4.png"
+        imgSrc="logo-unit4"
         title="u4-title"
         subtitle="u4-subtitle"
         tags={['C#', '.NET', 'SQL Server', 'Unit testing', 'SOLID']}
         expandId="unit4"
+        smallWidth={62}
+        bigWidth={280}
       />
 
-      <div id="unit4" class="flex hidden flex-col gap-4 px-1 text-left">
+      <div id="unit4" class="flex flex-col gap-4 px-1 text-left">
         <div class="flex flex-col gap-2">
           <h3 class="text-lg font-semibold" data-i18n-key="responsibilities">
             Responsibilities
@@ -79,15 +81,17 @@ import QualificationsCard from './QualificationsCard.astro';
       </div>
 
       <QualificationsCard
-        imgSrc="logo-ayuntamiento.png"
+        imgSrc="logo-ayuntamiento"
         title="elejido-title"
         subtitle="elejido-subtitle"
         tags={['Ionic', 'Angular', 'CSS', 'RxJS', 'PHP', 'Rest API']}
         expand
         expandId={'elejido'}
+        smallWidth={62}
+        bigWidth={340}
       />
 
-      <div id="elejido" class="flex hidden flex-col gap-4 px-1 text-left">
+      <div id="elejido" class="flex flex-col gap-4 px-1 text-left">
         <div class="flex flex-col gap-2">
           <h3 class="text-lg font-semibold" data-i18n-key="responsibilities">
             Responsibilities
@@ -119,15 +123,17 @@ import QualificationsCard from './QualificationsCard.astro';
       </div>
 
       <QualificationsCard
-        imgSrc="logo-ibm.png"
+        imgSrc="logo-ibm"
         title="ibm-title"
         subtitle="ibm-subtitle"
         tags={['HTML', 'CSS', 'JS', 'Java', 'PHP', 'Dojo']}
         expand
         expandId={'ibm'}
+        smallWidth={62}
+        bigWidth={200}
       />
 
-      <div id="ibm" class="flex hidden flex-col gap-4 px-1 text-left">
+      <div id="ibm" class="flex flex-col gap-4 px-1 text-left">
         <div class="flex flex-col gap-2">
           <h3 class="text-lg font-semibold" data-i18n-key="responsibilities">
             Responsibilities
@@ -166,25 +172,31 @@ import QualificationsCard from './QualificationsCard.astro';
     </div>
 
     <QualificationsCard
-      imgSrc="logo-lemoncode.png"
+      imgSrc="logo-lemoncode"
       title="lemoncode-title"
       subtitle="lemoncode-subtitle"
       tags={['React', 'Sass', 'Jest', 'ES6/ES7', 'Typescript']}
       expand={false}
+      smallWidth={62}
+      bigWidth={128}
     />
 
     <QualificationsCard
-      imgSrc="logo-ual.jpg"
+      imgSrc="logo-ual"
       title="university-title"
       subtitle="university-almeria-subtitle"
       expand={false}
+      smallWidth={62}
+      bigWidth={400}
     />
 
     <QualificationsCard
-      imgSrc="logo-wroclaw.png"
+      imgSrc="logo-wroclaw"
       title="erasmus-title"
       subtitle="wroclaw-university-subtitle"
       expand={false}
+      smallWidth={62}
+      bigWidth={480}
     />
   </div>
 </section>

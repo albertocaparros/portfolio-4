@@ -25,8 +25,8 @@ import ThemeToggler from './ThemeToggler';
           data-i18n-key="home">Blog</a
         >
       </div>
-      <button><ThemeToggler client:load /></button>
-      <button class="lg:hidden"
+      <button aria-label="Toggle theme"><ThemeToggler client:load /></button>
+      <button aria-label="Open navigation menu" class="lg:hidden"
         ><Apps height={5} width={5} id={'open-nav-menu'} /></button
       >
     </div>

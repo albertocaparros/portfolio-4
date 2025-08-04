@@ -2,13 +2,22 @@
 import Expander from './Expander';
 import Pill from './Pill.astro';
 
-const { imgSrc, title, subtitle, tags, expandId } = Astro.props;
+const {
+  imgSrc,
+  title,
+  subtitle,
+  tags,
+  expandId,
+  smallWidth = 64,
+  bigWidth = 200,
+} = Astro.props;
 ---
 
 <div class="clickable my-4 flex items-center justify-around gap-2">
   <img
-    src={`img/${imgSrc}`}
+    srcset={`/img/${imgSrc}-small.webp ${smallWidth}w, /img/${imgSrc}.webp ${bigWidth}w`}
     alt={imgSrc}
+    sizes="(max-width: 1024px) 64px, 200px"
     class="h-16 w-16 rounded-full border border-sky-50"
   />
   <div class="class= flex-1 text-left">
@@ -30,7 +39,7 @@ const { imgSrc, title, subtitle, tags, expandId } = Astro.props;
   </div>
   {
     expandId && (
-      <button>
+      <button aria-label="Expand">
         <Expander client:load expandId={expandId} />
       </button>
     )

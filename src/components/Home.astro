@@ -31,11 +31,15 @@ import Mail from '../icons/Mail.astro';
     </div>
 
     <img
-      src={'img/logo_light.png'}
+      srcset={`/img/logo_light-small.webp 176w, /img/logo_light.webp 550w`}
+      alt="Alberto Caparrós logo light version"
+      fetchpriority="high"
       class="mx-auto hidden w-44 dark:block sm:order-1 lg:w-64"
     />
     <img
-      src={'img/logo_dark.png'}
+      srcset={`/img/logo_dark-small.webp 176w, /img/logo_dark.webp 550w`}
+      alt="Alberto Caparrós logo dark version"
+      fetchpriority="high"
       class="mx-auto block w-44 dark:hidden sm:order-1 lg:w-64"
     />
 
