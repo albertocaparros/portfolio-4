@@ -1,5 +1,5 @@
 ---
-import Pill from './Pill.astro';
+import ProjectCard from './ProjectCard.astro';
 ---
 
 <section
@@ -10,49 +10,60 @@ import Pill from './Pill.astro';
     <div>
       <h2 class="text-4xl font-bold">Portfolio</h2>
       <p class="py-1 text-sm lg:text-lg" data-i18n-key="portfolio-subtitle">
-        Personal projects that I have worked on recently to showcase my skills
-        and learn new things.
+        Selected public repositories: Angular samples with modern tooling (signals,
+        Vitest/Jest, GitHub Actions), plus one React utility app.
+      </p>
+      <p
+        class="mx-auto mt-2 max-w-3xl text-sm text-slate-600 dark:text-slate-300 lg:text-base"
+        data-i18n-key="portfolio-angular-intro"
+      >
+        The first three projects are Angular (latest patterns). Source and CI are on
+        GitHub — live demos when deployed are linked from the repo README.
       </p>
     </div>
 
-    <div class="flex flex-col gap-6">
-      <a href="https://dailys-board.vercel.app/" target="_blank"
-        ><img
-          srcset={`/img/dailys-board-screenshot-small.webp 320w, /img/dailys-board-screenshot.webp 1519w`}
-          alt="Dailys board screenshot"
-          class="mx-auto w-80 rounded-lg"
-        /></a
-      >
-      <h3 class="text-2xl font-semibold lg:text-2xl">Dailys board</h3>
-      <p class="text-sm lg:text-lg" data-i18n-key="dailys-board-description">
-        With remote work we lost the good old analogic board that helped the
-        team move the daily meeting forward. Tired of awkward silents and people
-        asking who had already talked, I created this simple app to help my
-        team. Currently it is using localstorage for data persistency, and I'm
-        working on adding a toast notification feature.
-      </p>
-      <ul class="flex flex-wrap justify-center gap-2 text-sm">
-        <Pill tag={'react'} />
-        <Pill tag={'tailwind'} />
-        <Pill tag={'cypress'} />
-        <Pill tag={'Hooks'} />
-      </ul>
-      <div class="flex justify-center gap-4">
-        <a
-          class="rounded border border-black bg-blue-200 px-6 py-3 hover:bg-blue-300 dark:bg-sky-800 dark:hover:bg-sky-700"
-          href="https://dailys-board.vercel.app/"
-          target="_blank"
-        >
-          <span class="font-semibold">Demo</span></a
-        >
-        <a
-          href="https://github.com/albertocaparros/dailys-board"
-          target="_blank"
-          class="rounded border border-black bg-blue-200 px-6 py-3 hover:bg-blue-300 dark:bg-sky-800 dark:hover:bg-sky-700"
-          ><i class="uil uil-brackets-curly button_icon"></i>
-          <span data-i18n-key="code" class="font-semibold">Code</span></a
-        >
-      </div>
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-8">
+      <ProjectCard
+        titleKey="habit-tracker-title"
+        fallbackTitle="Habit Tracker"
+        descriptionKey="habit-tracker-description"
+        fallbackDescription="Angular 20 app: zoneless change detection, signals and stores, i18n, PWA, Biome, Vitest, Playwright, and CI with tests and deploy."
+        codeUrl="https://github.com/albertocaparros/habit-tracker"
+        demoUrl="https://habit-tracker-nine-navy.vercel.app/"
+        tags={['Angular 20', 'signals', 'Vitest', 'PWA', 'CI']}
+        placeholder="sky"
+        featured={true}
+      />
+      <ProjectCard
+        titleKey="mini-scrum-title"
+        fallbackTitle="Mini-Scrum"
+        descriptionKey="mini-scrum-description"
+        fallbackDescription="Product and sprint backlog demo with Angular Material, signal-based state, Vitest, lazy-loaded routes, and GitHub Actions CI."
+        codeUrl="https://github.com/albertocaparros/mini-scrum"
+        tags={['Angular', 'Material', 'Vitest', 'lazy routes']}
+        placeholder="violet"
+      />
+      <ProjectCard
+        titleKey="blackjack-title"
+        fallbackTitle="Blackjack"
+        descriptionKey="blackjack-description"
+        fallbackDescription="Angular 18 sample integrating the Deck of Cards API: Jest, Cypress E2E with mocked HTTP, ESLint, and CI (lint, test, build, E2E)."
+        codeUrl="https://github.com/albertocaparros/blackjack"
+        tags={['Angular 18', 'Jest', 'Cypress', 'CI']}
+        placeholder="emerald"
+      />
+      <ProjectCard
+        titleKey="dailys-board-title"
+        fallbackTitle="Dailys board"
+        descriptionKey="dailys-board-description"
+        fallbackDescription="With remote work we lost the good old analogic board that helped the team move the daily meeting forward. Tired of awkward silents and people asking who had already talked, I created this simple app to help my team. Currently it is using localstorage for data persistency, and I'm working on adding a toast notification feature."
+        codeUrl="https://github.com/albertocaparros/dailys-board"
+        demoUrl="https://dailys-board.vercel.app/"
+        tags={['React', 'Tailwind', 'Cypress', 'Hooks']}
+        placeholder="none"
+        imageSrc="/img/dailys-board-screenshot.webp"
+        imageSrcSet="/img/dailys-board-screenshot-small.webp 320w, /img/dailys-board-screenshot.webp 1519w"
+      />
     </div>
   </div>
 </section>

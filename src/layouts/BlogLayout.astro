@@ -1,13 +1,13 @@
 ---
 import '../styles/post.css';
-import Datetime from '../components/Datetime';
-import Layout from './Layout.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogNavMenu from '../components/BlogNavMenu.astro';
+import Datetime from '../components/Datetime';
 import ArrowLeft from '../icons/ArrowLeft.astro';
+import Layout from './Layout.astro';
 
 const {
-  data: { title, pubDate },
+	data: { title, pubDate },
 } = Astro.props;
 ---
 

@@ -1,0 +1,112 @@
+---
+import Pill from './Pill.astro';
+
+interface Props {
+	titleKey: string;
+	fallbackTitle: string;
+	fallbackDescription: string;
+	descriptionKey: string;
+	codeUrl: string;
+	demoUrl?: string;
+	tags: string[];
+	placeholder: 'sky' | 'violet' | 'emerald' | 'none';
+	imageSrc?: string;
+	imageSrcSet?: string;
+	featured?: boolean;
+}
+
+const {
+	titleKey,
+	fallbackTitle,
+	fallbackDescription,
+	descriptionKey,
+	codeUrl,
+	demoUrl,
+	tags,
+	placeholder,
+	imageSrc,
+	imageSrcSet,
+	featured = false,
+} = Astro.props;
+
+const placeholderClass =
+	placeholder === 'sky'
+		? 'from-sky-500 to-indigo-700'
+		: placeholder === 'violet'
+			? 'from-violet-500 to-purple-800'
+			: placeholder === 'emerald'
+				? 'from-emerald-500 to-teal-800'
+				: '';
+---
+
+<div
+  class:list={[
+    'flex flex-col gap-4 rounded-xl border border-slate-300 bg-white/80 p-4 text-left shadow-sm dark:border-slate-600 dark:bg-slate-800/50',
+    featured && 'ring-2 ring-sky-400 dark:ring-sky-500',
+  ]}
+>
+  {
+    imageSrc ? (
+      <a
+        href={demoUrl ?? codeUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block overflow-hidden rounded-lg"
+      >
+        <img
+          src={imageSrc}
+          srcset={imageSrcSet}
+          sizes="(max-width: 640px) 320px, 760px"
+          alt=""
+          class="mx-auto w-full max-w-md rounded-lg"
+        />
+      </a>
+    ) : placeholder !== 'none' ? (
+      <div
+        class:list={[
+          'min-h-[12rem] rounded-lg bg-gradient-to-br shadow-inner',
+          placeholderClass,
+        ]}
+        aria-hidden="true"
+      />
+    ) : null
+  }
+
+  <h3 class="text-center text-2xl font-semibold sm:text-left" data-i18n-key={titleKey}>
+    {fallbackTitle}
+  </h3>
+
+  <p class="text-center text-sm sm:text-left lg:text-lg" data-i18n-key={descriptionKey}>
+    {fallbackDescription}
+  </p>
+
+  <ul class="flex flex-wrap justify-center gap-2 sm:justify-start">
+    {tags.map((tag) => (
+      <Pill tag={tag} />
+    ))}
+  </ul>
+
+  <div class="flex flex-wrap items-center justify-center gap-2">
+    {
+      demoUrl ? (
+        <a
+          class="inline-flex items-center justify-center rounded border border-black bg-blue-200 px-4 py-2 text-sm font-semibold hover:bg-blue-300 dark:bg-sky-800 dark:hover:bg-sky-700"
+          href={demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span data-i18n-key="demo">Demo</span>
+        </a>
+      ) : null
+    }
+    <a
+      href={codeUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center gap-1 rounded border border-black bg-blue-200 px-4 py-2 text-sm font-semibold hover:bg-blue-300 dark:bg-sky-800 dark:hover:bg-sky-700"
+    >
+      <i class="uil uil-brackets-curly text-[0.95em] leading-none" aria-hidden="true" />
+      <span data-i18n-key="code">Code</span>
+    </a>
+  </div>
+</div>

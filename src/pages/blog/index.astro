@@ -1,17 +1,17 @@
 ---
 import '../../styles/post.css';
-import Layout from '../../layouts/Layout.astro';
-import Separator from '../../components/Separator.astro';
+import { getCollection } from 'astro:content';
 import BlogHeader from '../../components/BlogHeader.astro';
 import BlogNavMenu from '../../components/BlogNavMenu.astro';
-import { getCollection } from 'astro:content';
 import PostsSection from '../../components/PostsSection.jsx';
+import Separator from '../../components/Separator.astro';
+import Layout from '../../layouts/Layout.astro';
 
 const posts = await getCollection('blog');
 const allTags = [...new Set(posts.flatMap((post) => post.data.tags))];
 const postsByLatest = posts.sort(
-  (a, b) =>
-    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+	(a, b) =>
+		new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
 );
 ---
 
